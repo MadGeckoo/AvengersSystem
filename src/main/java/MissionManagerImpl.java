@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class MissionManagerImpl implements MissionManager {
 
 	private SuperHeroManager superHeroManager;
