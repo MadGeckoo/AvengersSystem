@@ -17,7 +17,7 @@ public class SuperHero {
 	 * @param realSurname
 	 */
 	public SuperHero(String superName, String realName, String realSurname) {
-		// TODO - implement SuperHero.SuperHero
+		// TODO - implement SperHero.SuperHero
 		throw new UnsupportedOperationException();
 	}
 
