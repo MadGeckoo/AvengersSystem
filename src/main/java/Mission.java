@@ -1,3 +1,6 @@
+
+import java.sql.Timestamp;
+
 public class Mission {
 
 	private long id;
