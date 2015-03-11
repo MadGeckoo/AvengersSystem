@@ -4,14 +4,21 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SuperHeroManagerImplTest {
+    SuperHeroManagerImpl heroManager;
 
     @Before
     public void setUp() throws Exception {
+        heroManager = new SuperHeroManagerImpl();
 
     }
 
     @Test
     public void testAddHero() throws Exception {
+        try {
+            Hero hero = new Hero();
+
+
+        }
 
     }
 
