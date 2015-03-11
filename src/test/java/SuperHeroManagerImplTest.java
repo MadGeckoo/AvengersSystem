@@ -14,12 +14,13 @@ public class SuperHeroManagerImplTest {
 
     @Test
     public void testAddHero() throws Exception {
-        try {
-            Hero hero = new Hero();
+    try
+    {
+        heroManager.addHero(null);
+        fail("Pri pridavani null hera malo vyhoditt NPE");
 
-
-        }
-
+    }
+     catch (NullPointerException ex)
     }
 
     @Test

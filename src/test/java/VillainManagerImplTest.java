@@ -4,15 +4,23 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class VillainManagerImplTest {
+    VillainManagerImpl villainManager;
 
     @Before
     public void setUp() throws Exception {
-
+        VillainManager=new VillainManagerImpl();
     }
 
     @Test
     public void testAddVillain() throws Exception {
+        try
+        {
+            villainManager.addVillain(null);
+            fail("Pri pridavani null villaina malo vyhoditt NPE");
 
+        }
+        catch (NullPointerException ex)
+    }
     }
 
     @Test

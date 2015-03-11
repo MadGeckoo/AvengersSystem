@@ -43,7 +43,13 @@ public class MissionManagerImplTest {
 
 
     @Test
-    public void testCreateMission() throws Exception {
+    public void testCreateMissionWithVillainNull()throws Exception {
+        Mission mission=new Mission();
+        try{
+            mission.setVillan(null);
+            fail("Nevyhodilo NPE pre pridanie null villaina");
+        }
+        catch (NullPointerException ex)
 
     }
 
