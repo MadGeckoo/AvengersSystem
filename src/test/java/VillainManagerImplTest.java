@@ -8,7 +8,7 @@ public class VillainManagerImplTest {
 
     @Before
     public void setUp() throws Exception {
-        VillainManager=new VillainManagerImpl();
+        villainManager=new VillainManagerImpl();
     }
 
     @Test
@@ -20,8 +20,12 @@ public class VillainManagerImplTest {
 
         }
         catch (NullPointerException ex)
+        {
+
+
+        }
     }
-    }
+
 
     @Test
     public void testGetVillainByID() throws Exception {

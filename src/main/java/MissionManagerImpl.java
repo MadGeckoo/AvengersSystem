@@ -5,11 +5,15 @@ public class MissionManagerImpl implements MissionManager {
 	private SuperHeroManager superHeroManager;
 	private VillainManager villainManager;
 
-	/**
+    public MissionManagerImpl()
+    {
+    }
+
+    /**
 	 * 
 	 * @param mission
 	 */
-	public void createMission(Mission mission) {
+	public Mission createMission(Mission mission) {
 		// TODO - implement MissionManagerImpl.createMission
 		throw new UnsupportedOperationException();
 	}

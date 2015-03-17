@@ -6,7 +6,7 @@ public interface MissionManager {
 	 * 
 	 * @param mission
 	 */
-	void createMission(Mission mission);
+	Mission createMission(Mission mission);
 
 	/**
 	 * 

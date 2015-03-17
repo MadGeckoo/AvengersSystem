@@ -21,6 +21,10 @@ public class SuperHeroManagerImplTest {
 
     }
      catch (NullPointerException ex)
+     {
+
+
+     }
     }
 
     @Test

@@ -11,15 +11,20 @@ public class MissionManagerImplTest {
 
     @Before
     public void setUp() throws Exception {
-        missionManager = new MissionManagerImpl();
+    missionManager= new MissionManagerImpl();
 
     }
     @Test
     public void testCreateMissionWithNull() throws Exception {
-        try {
+        try
+        {
             missionManager.createMission(null);
-            fail("Nevyhodilo NPE pre prazdny vstup(null)")
-        }catch (NullPointerException ex)
+            fail("Nevyhodilo NPE pre prazdny vstup(null)");
+        }
+        catch (NullPointerException ex)
+        {
+
+        }
     }
     @Test
      public void testCreateMissionWithID() throws Exception {
@@ -50,6 +55,9 @@ public class MissionManagerImplTest {
             fail("Nevyhodilo NPE pre pridanie null villaina");
         }
         catch (NullPointerException ex)
+        {
+
+        }
 
     }
 
