@@ -1,31 +1,25 @@
 public class SuperHero {
 
-	private long id;
+	private Long id;
 	private String superName;
 	private String realName;
 	private String realSurname;
 
 	public SuperHero() {
-		// TODO - implement SuperHero.SuperHero
-		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param superName
-	 * @param realName
-	 * @param realSurname
-	 */
-	public SuperHero(String superName, String realName, String realSurname) {
-		// TODO - implement SperHero.SuperHero
-		throw new UnsupportedOperationException();
-	}
+	public SuperHero(Long id,String superName, String realName, String realSurname) {
+        this.id=id;
+		this.superName=superName;
+        this.realName=realName;
+        this.realSurname=realSurname;
+    }
 
 	public String getSuperName() {
 		return this.superName;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return this.id;
 	}
 
@@ -33,10 +27,6 @@ public class SuperHero {
 		return this.realName;
 	}
 
-	/**
-	 * 
-	 * @param realName
-	 */
 	public void setRealName(String realName) {
 		this.realName = realName;
 	}
@@ -45,20 +35,43 @@ public class SuperHero {
 		return this.realSurname;
 	}
 
-	/**
-	 * 
-	 * @param realSurname
-	 */
 	public void setRealSurname(String realSurname) {
 		this.realSurname = realSurname;
 	}
 
-	/**
-	 * 
-	 * @param superName
-	 */
 	public void setSuperName(String superName) {
 		this.superName = superName;
 	}
 
+    @Override
+    public String toString() {
+        return "SuperHero{" +
+                "id=" + id +
+                ", superName='" + superName + '\'' +
+                ", realName='" + realName + '\'' +
+                ", realSurname='" + realSurname + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        SuperHero superHero = (SuperHero) o;
+
+        if (!realName.equals(superHero.realName)) return false;
+        if (!realSurname.equals(superHero.realSurname)) return false;
+        if (!superName.equals(superHero.superName)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = superName.hashCode();
+        result = 31 * result + realName.hashCode();
+        result = 31 * result + realSurname.hashCode();
+        return result;
+    }
 }

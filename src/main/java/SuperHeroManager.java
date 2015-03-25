@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface SuperHeroManager {
 
 	/**
@@ -16,12 +18,14 @@ public interface SuperHeroManager {
 	 * 
 	 * @param id
 	 */
-	SuperHero getHeroByID(long id);
+	SuperHero getHeroByID(Long id);
 
 	/**
 	 * 
 	 * @param superHero
 	 */
 	void updateHero(SuperHero superHero);
+
+    List<SuperHero> getAllSuperHeroes() throws SuperHeroException;
 
 }

@@ -1,0 +1,13 @@
+CREATE TABLE superheroes(
+  id INTEGER NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  supername VARCHAR(30),
+  realname VARCHAR(20),
+  realsurname VARCHAR(40)
+);
+
+CREATE TABLE villains(
+  id INTEGER NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  villainname VARCHAR(30),
+  realname VARCHAR(20),
+  realsurname VARCHAR(40)
+);
