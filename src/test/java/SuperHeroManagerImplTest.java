@@ -1,5 +1,10 @@
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.junit.Before;
 import org.junit.Test;
+
+import javax.activation.DataSource;
+
+import java.util.Properties;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +13,15 @@ public class SuperHeroManagerImplTest {
 
     @Before
     public void setUp() throws Exception {
-        heroManager = new SuperHeroManagerImpl();
+        Properties myconf = new Properties();
+        myconf.load(Main.class.getResourceAsStream("/myconf.properties"));
+
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl(myconf.getProperty("jdbc.url"));
+        ds.setUsername(myconf.getProperty("jdbc.user"));
+        ds.setPassword(myconf.getProperty("jdbc.password"));
+
+        heroManager = new SuperHeroManagerImpl(ds);
 
     }
 
