@@ -27,7 +27,11 @@ public class SuperHero {
 		return this.realName;
 	}
 
-	public void setRealName(String realName) {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setRealName(String realName) {
 		this.realName = realName;
 	}
 

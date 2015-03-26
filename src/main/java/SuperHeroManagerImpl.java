@@ -15,34 +15,85 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
     }
 
 
-	public void addHero(SuperHero superHero) {
+	public void addHero(SuperHero superHero) throws SuperHeroException{
         if (superHero == null) {
             throw new IllegalArgumentException("superhero is null");
-        }
-        if (superHero.getId() != null)
-        {
-            throw new IllegalArgumentException("superhero id is already set");
         }
         if (superHero.getSuperName().equals(""))
         {
             throw new IllegalArgumentException("hero with no supername");
         }
 
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("insert into superheroes (supername,realname,realsurname) values (?,?,?)",PreparedStatement.RETURN_GENERATED_KEYS)) {
+                st.setString(1, superHero.getSuperName());
+                st.setString(2, superHero.getRealName());
+                st.setString(3, superHero.getRealSurname());
+                st.executeUpdate();
+                try (ResultSet keys = st.getGeneratedKeys()) {
+                    if (keys.next()) {
+                        Long id = keys.getLong(1);
+                        superHero.setId(id);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new SuperHeroException("database insert failed", e);
+        }
 	}
 
 
-	public SuperHero getHeroByID(Long id) {
+    public SuperHero getHeroByID(Long id) throws SuperHeroException {
+            try (Connection con = dataSource.getConnection()) {
+                try (PreparedStatement st = con.prepareStatement("select * from superheroes where id = ?")) {
+                    st.setLong(1, id);
+                    try (ResultSet rs = st.executeQuery()) {
+                        if (rs.next()) {
+                            return new SuperHero(rs.getLong("id"), rs.getString("supername"), rs.getString("realname"),rs.getString("realsurname"));
+                        } else {
+                            return null;
+                        }
+                    }
+                }
+            } catch (SQLException e) {
+                throw new SuperHeroException("database select failed", e);
+            }
+    }
 
-	}
+    public void updateHero(SuperHero superHero) throws SuperHeroException{
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("update superheroes set supername=?, realname=?, realsurname=? where id=?")) {
+                st.setString(1, superHero.getSuperName());
+                st.setString(2, superHero.getRealName());
+                st.setString(3, superHero.getRealSurname());
+                st.setLong(4, superHero.getId());
+                int n = st.executeUpdate();
+                if (n != 1) {
+                    throw new SuperHeroException("not updated superhero with id " + superHero.getId(), null);
+                }
+            }
+        } catch (SQLException e) {
+            throw new SuperHeroException("database update failed", e);
+        }
+    }
 
-	public void removeHero(SuperHero superHero) {
-		// TODO - implement SuperHeroManagerImpl.removeHero
-		throw new UnsupportedOperationException();
-	}
 
-	public void updateHero(SuperHero superHero) {
-		// TODO - implement SuperHeroManagerImpl.updateHero
-		throw new UnsupportedOperationException();
+
+    public void removeHero(SuperHero superHero)throws SuperHeroException {
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("DELETE  FROM superheroes WHERE supername=? and realname=? and realsurname=? and id=?")) {
+                st.setString(1, superHero.getSuperName());
+                st.setString(2, superHero.getRealName());
+                st.setString(3, superHero.getRealSurname());
+                st.setLong(4, superHero.getId());
+                int n = st.executeUpdate();
+                if (n != 1) {
+                    throw new SuperHeroException("superhero not deleted with id: " + superHero.getId(), null);
+                }
+            }
+        } catch (SQLException e) {
+            throw new SuperHeroException("database update failed", e);
+        }
 	}
 
 
