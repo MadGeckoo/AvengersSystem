@@ -11,3 +11,12 @@ CREATE TABLE villains(
   realname VARCHAR(20),
   realsurname VARCHAR(40)
 );
+
+CREATE TABLE missions(
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+  heroid INT REFERENCES superheroes(id) ON DELETE CASCADE,
+  villainid INT REFERENCES villains(id) ON DELETE CASCADE,
+  location VARCHAR(40),
+  timestamp TIMESTAMP,
+  herowon BOOLEAN
+)
