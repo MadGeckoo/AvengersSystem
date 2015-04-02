@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8bfba0c-f2b2-4aab-8cec-d235f021bc38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Villain.java" afterPath="$PROJECT_DIR$/src/main/java/Villain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/VillainManager.java" afterPath="$PROJECT_DIR$/src/main/java/VillainManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/VillainManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/VillainManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Mission.java" afterPath="$PROJECT_DIR$/src/main/java/Mission.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/MissionManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/MissionManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/SuperHeroManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/SuperHeroManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AvengersSystem.iws" />
@@ -44,10 +45,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MissionManagerImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MissionManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MissionManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33286715" vertical-offset="510" max-vertical-offset="1683">
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1683">
               <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -72,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuperHeroManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SuperHeroManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/SuperHeroManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+            <state vertical-scroll-proportion="0.38041958" vertical-offset="0" max-vertical-offset="715">
               <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding>
                 <element signature="docComment;method#addHero#0;class#SuperHeroManager#0" expanded="false" />
@@ -107,6 +108,22 @@
                 <element signature="e#1569#1608#0" expanded="false" />
                 <element signature="e#3766#3767#0" expanded="true" />
                 <element signature="e#3833#3834#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperHeroManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SuperHeroManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="2788">
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1427987701702" expanded="true" signature="1465:1501" placeholder="SELECT * FRO..superheroes..." />
+                <marker date="1427987701702" expanded="true" signature="1610:1644" placeholder="DELETE FROM ..." />
+                <marker date="1427987701702" expanded="true" signature="1753:1823" placeholder="UPDATE super..." />
+                <marker date="1427987701702" expanded="true" signature="2021:2046" placeholder="SELECT * FRO..superheroes..." />
               </folding>
             </state>
           </provider>
@@ -746,7 +763,7 @@
       <workItem from="1427806154897" duration="224000" />
       <workItem from="1427919194017" duration="623000" />
       <workItem from="1427921943249" duration="6596000" />
-      <workItem from="1427972968332" duration="3807000" />
+      <workItem from="1427972968332" duration="3993000" />
     </task>
     <task id="LOCAL-00001" summary="prvy test">
       <created>1425629726407</created>
@@ -796,11 +813,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427929230089</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="obidve entitne triedz prerobene na Spring, v Maine doplnene stirngove apliakcie&#10;TODO: MissionManager a Impl + testy + vlaknovo bezpecne">
+      <created>1427987931155</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1427987931155</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53970000" />
+    <option name="totallyTimeSpent" value="54156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
@@ -809,6 +832,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32851985" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -829,7 +853,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32851985" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -856,7 +879,8 @@
     <MESSAGE value="dopisane testy idu skompilovat" />
     <MESSAGE value="doplnene JDBC do CRUD metod v entitnej triede SuperHeroManagerImpl&#10;TO DO: dopisat testy accordingly" />
     <MESSAGE value="doplneny Spring v VillainManagerImpl+upravene interface a konstruktory accordingly" />
-    <option name="LAST_COMMIT_MESSAGE" value="doplneny Spring v VillainManagerImpl+upravene interface a konstruktory accordingly" />
+    <MESSAGE value="obidve entitne triedz prerobene na Spring, v Maine doplnene stirngove apliakcie&#10;TODO: MissionManager a Impl + testy + vlaknovo bezpecne" />
+    <option name="LAST_COMMIT_MESSAGE" value="obidve entitne triedz prerobene na Spring, v Maine doplnene stirngove apliakcie&#10;TODO: MissionManager a Impl + testy + vlaknovo bezpecne" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1371,19 +1395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SuperHeroManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding>
-            <element signature="docComment;method#addHero#0;class#SuperHeroManager#0" expanded="false" />
-            <element signature="docComment;method#removeHero#0;class#SuperHeroManager#0" expanded="false" />
-            <element signature="docComment;method#getHeroByID#0;class#SuperHeroManager#0" expanded="false" />
-            <element signature="docComment;method#updateHero#0;class#SuperHeroManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/VillainManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29336965" vertical-offset="0" max-vertical-offset="1101">
@@ -1394,24 +1405,6 @@
             <marker date="1427929101858" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
             <marker date="1427929101858" expanded="true" signature="-1:-1" placeholder="UPDATE villa..." />
             <marker date="1427929101858" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..villains..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SuperHeroManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65451896" vertical-offset="10" max-vertical-offset="2890">
-          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1587#1588#0" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1992#1993#0" expanded="true" />
-            <element signature="e#2065#2066#0" expanded="true" />
-            <marker date="1427987701702" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..villains..." />
-            <marker date="1427987701702" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427987701702" expanded="true" signature="-1:-1" placeholder="UPDATE super..." />
-            <marker date="1427987701702" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..villains..." />
           </folding>
         </state>
       </provider>
@@ -1431,7 +1424,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MissionManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33286715" vertical-offset="510" max-vertical-offset="1683">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1683">
           <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1441,6 +1434,33 @@
             <element signature="e#885#886#0" expanded="true" />
             <element signature="e#953#954#0" expanded="true" />
             <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SuperHeroManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="2788">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1427987701702" expanded="true" signature="1465:1501" placeholder="SELECT * FRO..superheroes..." />
+            <marker date="1427987701702" expanded="true" signature="1610:1644" placeholder="DELETE FROM ..." />
+            <marker date="1427987701702" expanded="true" signature="1753:1823" placeholder="UPDATE super..." />
+            <marker date="1427987701702" expanded="true" signature="2021:2046" placeholder="SELECT * FRO..superheroes..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SuperHeroManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38041958" vertical-offset="0" max-vertical-offset="715">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <element signature="docComment;method#addHero#0;class#SuperHeroManager#0" expanded="false" />
+            <element signature="docComment;method#removeHero#0;class#SuperHeroManager#0" expanded="false" />
+            <element signature="docComment;method#getHeroByID#0;class#SuperHeroManager#0" expanded="false" />
+            <element signature="docComment;method#updateHero#0;class#SuperHeroManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

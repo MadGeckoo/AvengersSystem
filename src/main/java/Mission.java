@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class Mission {
 
-	private long id;
+	private Long id;
 	private String location;
 	private Timestamp timestamp;
 	private SuperHero hero;
@@ -29,7 +29,7 @@ public class Mission {
 		throw new UnsupportedOperationException();
 	}
 
-	public long getId() {
+	public Long getId() {
 		return this.id;
 	}
 

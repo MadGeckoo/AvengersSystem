@@ -1,12 +1,34 @@
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+
+import javax.sql.DataSource;
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 public class MissionManagerImpl implements MissionManager {
 
 	private SuperHeroManager superHeroManager;
 	private VillainManager villainManager;
+    private JdbcTemplate jdbc;
 
-    public MissionManagerImpl()
+    public MissionManagerImpl(DataSource dataSource)
     {
+        jdbc=new JdbcTemplate(dataSource);
+    }
+
+    public void setSuperHeroManager(SuperHeroManager superHeroManager) {
+        this.superHeroManager = superHeroManager;
+    }
+
+    public void setVillainManager(VillainManager villainManager) {
+        this.villainManager = villainManager;
     }
 
     /**

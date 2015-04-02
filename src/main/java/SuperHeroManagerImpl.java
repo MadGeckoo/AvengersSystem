@@ -1,4 +1,9 @@
-import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -8,7 +13,55 @@ import java.util.ArrayList;
 
 public class SuperHeroManagerImpl implements SuperHeroManager {
 
-    private final DataSource dataSource;
+
+    private JdbcTemplate jdbc;
+
+    public SuperHeroManagerImpl(DataSource dataSource)
+    {
+        this.jdbc=new JdbcTemplate(dataSource);
+    }
+
+    @Override
+    public void addHero(SuperHero hero)
+    {
+        SimpleJdbcInsert insertHero=new SimpleJdbcInsert(jdbc).withTableName("superheroes").usingGeneratedKeyColumns("id");
+
+        SqlParameterSource parameters=new MapSqlParameterSource().addValue("supername", hero.getSuperName()).addValue("realname",hero.getRealName()).addValue("realsurname", hero.getRealSurname());
+
+        Number id=insertHero.executeAndReturnKey(parameters);
+        hero.setId(id.longValue());
+
+    }
+
+    private RowMapper<SuperHero> heroMapper=(rs,rowNum)->new SuperHero(rs.getLong("id"),rs.getString("supername"),rs.getString("realname"),rs.getString("realsurname"));
+
+    @Override
+    public SuperHero getHeroByID(Long id)
+    {
+        return jdbc.queryForObject("SELECT * FROM superheroes WHERE id=?",heroMapper,id);
+    }
+
+    @Override
+    public void removeHero(SuperHero hero)
+    {
+        jdbc.update("DELETE FROM superheroes WHERE id=?", hero.getId());
+    }
+
+    @Override
+    public void updateHero(SuperHero hero)
+    {
+        jdbc.update("UPDATE superheroes SET supername=?,realname=?,realsurname=? where id=?",hero.getSuperName(),hero.getRealName(),hero.getRealSurname(),hero.getId());
+    }
+
+    @Transactional
+    @Override
+    public List<SuperHero> getAllSuperHeroes()
+    {
+        return jdbc.query("SELECT * FROM superheroes",heroMapper);
+    }
+
+
+    /*private final DataSource dataSource;
     public SuperHeroManagerImpl(DataSource dataSource)
     {
         this.dataSource=dataSource;
@@ -111,5 +164,5 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
         } catch (SQLException e) {
             throw new SuperHeroException("database select failed", e);
         }
-    }
+    }*/
 }
