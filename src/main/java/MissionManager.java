@@ -6,7 +6,7 @@ public interface MissionManager {
 	 * 
 	 * @param mission
 	 */
-	Mission createMission(Mission mission);
+	void createMission(Mission mission);
 
 	/**
 	 * 
@@ -20,7 +20,7 @@ public interface MissionManager {
 	 * 
 	 * @param id
 	 */
-	Mission getMissionByID(long id);
+	Mission getMissionByID(Long id);
 
 	/**
 	 * 
@@ -34,11 +34,6 @@ public interface MissionManager {
 	 */
 	List<Mission> findMissionsByVillain(Villain villain);
 
-	/**
-	 * 
-	 * @param superHero
-	 * @param villain
-	 */
-	List<Mission> findMissionsHeroVsVillain(SuperHero superHero, Villain villain);
+
 
 }

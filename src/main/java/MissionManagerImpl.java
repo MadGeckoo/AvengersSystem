@@ -35,14 +35,22 @@ public class MissionManagerImpl implements MissionManager {
 	 * 
 	 * @param mission
 	 */
-	public Mission createMission(Mission mission) {
-		// TODO - implement MissionManagerImpl.createMission
-		throw new UnsupportedOperationException();
+	public void createMission(Mission mission)
+    {
+		SimpleJdbcInsert insertMission=new SimpleJdbcInsert(jdbc).withTableName("missions").usingGeneratedKeyColumns("id");
+        SqlParameterSource parameters=new MapSqlParameterSource()
+                .addValue("heroid",mission.getHero().getId())
+                .addValue("villainid",mission.getVillain().getId())
+                .addValue("location",mission.getLocation())
+                .addValue("timestamp",mission.getDate())
+                .addValue("herowon",mission.getHeroWon());
+        Number id=insertMission.executeAndReturnKey(parameters);
+        mission.setId(id.longValue());
 	}
 
-	public List<Mission> findAllMissions() {
-		// TODO - implement MissionManagerImpl.findAllMissions
-		throw new UnsupportedOperationException();
+	public List<Mission> findAllMissions()
+    {
+
 	}
 
 	/**
@@ -65,19 +73,9 @@ public class MissionManagerImpl implements MissionManager {
 
 	/**
 	 * 
-	 * @param superHero
-	 * @param villain
-	 */
-	public List<Mission> findMissionsHeroVsVillain(SuperHero superHero, Villain villain) {
-		// TODO - implement MissionManagerImpl.findMissionsHeroVsVillain
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
 	 * @param id
 	 */
-	public Mission getMissionByID(long id) {
+	public Mission getMissionByID(Long id) {
 		// TODO - implement MissionManagerImpl.getMissionByID
 		throw new UnsupportedOperationException();
 	}

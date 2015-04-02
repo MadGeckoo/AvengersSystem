@@ -1,14 +1,14 @@
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 
 public class Mission {
 
 	private Long id;
 	private String location;
-	private Timestamp timestamp;
+	private Date date;
 	private SuperHero hero;
-	private Villain villan;
+	private Villain villain;
 	private boolean heroWon;
 
 	public Mission() {
@@ -16,20 +16,29 @@ public class Mission {
 		throw new UnsupportedOperationException();
 	}
 
-	/**
+
+
+    /**
 	 * 
 	 * @param location
-	 * @param timestamp
+	 * @param date
 	 * @param hero
 	 * @param villain
 	 * @param heroWon
 	 */
-	public Mission(String location, Timestamp timestamp, SuperHero hero, Villain villain, boolean heroWon) {
-		// TODO - implement Mission.Mission
-		throw new UnsupportedOperationException();
-	}
+    public Mission(Long id, String location, Date date, SuperHero hero, Villain villain, boolean heroWon) {
+        this.id = id;
+        this.location = location;
+        this.date = date;
+        this.hero = hero;
+        this.villain = villain;
+        this.heroWon = heroWon;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public Long getId() {
+    public Long getId() {
 		return this.id;
 	}
 
@@ -45,28 +54,24 @@ public class Mission {
 		this.location = location;
 	}
 
-	public Timestamp getTimestamp() {
-		return this.timestamp;
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Villain getVillain() {
+		return this.villain;
 	}
 
 	/**
 	 * 
-	 * @param timestamp
+	 * @param villain
 	 */
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
-	}
-
-	public Villain getVillan() {
-		return this.villan;
-	}
-
-	/**
-	 * 
-	 * @param villan
-	 */
-	public void setVillan(Villain villan) {
-		this.villan = villan;
+	public void setVillain(Villain villain) {
+		this.villain = villain;
 	}
 
 	public SuperHero getHero() {
