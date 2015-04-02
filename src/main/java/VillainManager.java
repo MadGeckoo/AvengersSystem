@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface VillainManager {
 
 	/**
@@ -16,12 +18,14 @@ public interface VillainManager {
 	 * 
 	 * @param id
 	 */
-	Villain getVillainByID(long id);
+	Villain getVillainByID(Long id);
 
 	/**
 	 * 
 	 * @param villain
 	 */
 	void updateVillain(Villain villain);
+
+    List<Villain> getAllVillains();
 
 }
