@@ -17,6 +17,6 @@ CREATE TABLE missions(
   heroid INT REFERENCES superheroes(id) ON DELETE CASCADE,
   villainid INT REFERENCES villains(id) ON DELETE CASCADE,
   location VARCHAR(40),
-  timestamp TIMESTAMP,
+  date DATE,
   herowon BOOLEAN
 )
