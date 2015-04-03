@@ -9,6 +9,10 @@ public class SuperHero {
 	}
 
 	public SuperHero(Long id,String superName, String realName, String realSurname) {
+        if (superName.equals(""))
+        {
+            throw new IllegalArgumentException("Hero has to have super name");
+        }
         this.id=id;
 		this.superName=superName;
         this.realName=realName;

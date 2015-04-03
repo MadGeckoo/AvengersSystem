@@ -9,7 +9,6 @@ import javax.sql.DataSource;
 import java.sql.*;
 import java.sql.Connection;
 import java.util.List;
-import java.util.ArrayList;
 
 public class VillainManagerImpl implements VillainManager {
 
@@ -23,6 +22,7 @@ public class VillainManagerImpl implements VillainManager {
     @Override
 	public void addVillain(Villain villain)
     {
+        validateVillain(villain);
 		SimpleJdbcInsert insertVillain=new SimpleJdbcInsert(jdbc).withTableName("villains").usingGeneratedKeyColumns("id");
 
         SqlParameterSource parameters=new MapSqlParameterSource().addValue("villainname",villain.getVillainName()).addValue("realname",villain.getRealName()).addValue("realsurname",villain.getRealSurname());
@@ -43,12 +43,14 @@ public class VillainManagerImpl implements VillainManager {
     @Override
 	public void removeVillain(Villain villain)
     {
+        validateVillain(villain);
 		jdbc.update("DELETE FROM villains WHERE id=?", villain.getId());
 	}
 
     @Override
 	public void updateVillain(Villain villain)
     {
+        validateVillain(villain);
         jdbc.update("UPDATE villains SET villainname=?,realname=?,realsurname=? where id=?",villain.getVillainName(),villain.getRealName(),villain.getRealSurname(),villain.getId());
 	}
 
@@ -57,5 +59,19 @@ public class VillainManagerImpl implements VillainManager {
     public List<Villain> getAllVillains()
     {
         return jdbc.query("SELECT * FROM villains",villainMapper);
+    }
+
+    private void validateVillain(Villain villain)
+    {
+        if (villain==null)
+        {
+            throw new IllegalArgumentException("villain is null");
+        }
+
+        if (villain.getVillainName()==null || villain.getVillainName().equals(""))
+        {
+            throw new IllegalStateException("villain with no villain name");
+        }
+
     }
 }

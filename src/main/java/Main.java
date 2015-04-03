@@ -25,12 +25,13 @@ import java.util.Properties;
  */
 public class Main {
 
-    public static void main(String[] args) throws IOException,SuperHeroException
+    public static void main(String[] args) throws IOException
     {
 
         ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
         VillainManager villainManager = ctx.getBean(VillainManager.class);
         SuperHeroManager heroManager = ctx.getBean(SuperHeroManager.class);
+        MissionManager missionManager=ctx.getBean(MissionManager.class);
 
         villainManager.getAllVillains().forEach(System.out::println);
         heroManager.getAllSuperHeroes().forEach(System.out::println);
@@ -38,6 +39,10 @@ public class Main {
         Villain villain=new Villain(null,"Jurko","Juraj","Mikula");
         villainManager.addVillain(villain);
 
+        SuperHero hero=new SuperHero(null,"Petrik","Peter","Pavlovic");
+        heroManager.addHero(hero);
+
+      /*  Mission mission=new Mission(null,"Hnojisko",)*/
         //Properties myconf = new Properties();
         //myconf.load(Main.class.getResourceAsStream("/myconf.properties"));
 

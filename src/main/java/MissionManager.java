@@ -6,13 +6,13 @@ public interface MissionManager {
 	 * 
 	 * @param mission
 	 */
-	void createMission(Mission mission);
+	void createMission(Mission mission) throws IllegalEntityException;
 
 	/**
 	 * 
 	 * @param mission
 	 */
-	void updateMission(Mission mission);
+	void updateMission(Mission mission) throws IllegalEntityException;
 
 	List<Mission> findAllMissions();
 
@@ -26,13 +26,13 @@ public interface MissionManager {
 	 * 
 	 * @param superHero
 	 */
-	List<Mission> findMissionsByHero(SuperHero superHero);
+	List<Mission> findMissionsByHero(SuperHero superHero) throws IllegalEntityException;
 
 	/**
 	 * 
 	 * @param villain
 	 */
-	List<Mission> findMissionsByVillain(Villain villain);
+	List<Mission> findMissionsByVillain(Villain villain) throws IllegalEntityException;
 
 
 

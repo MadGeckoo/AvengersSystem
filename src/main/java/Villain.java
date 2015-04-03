@@ -6,11 +6,13 @@ public class Villain {
 	private String realSurname;
 
 	public Villain() {
-		// TODO - implement Villain.Villain
-		throw new UnsupportedOperationException();
-	}
+    }
 
     public Villain(Long id, String villainName, String realName, String realSurname) {
+        if (villainName.equals(""))
+        {
+            throw new IllegalArgumentException("Villain has to have villain name");
+        }
         this.id = id;
         this.villainName = villainName;
         this.realName = realName;

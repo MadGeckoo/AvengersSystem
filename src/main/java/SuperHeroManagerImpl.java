@@ -24,6 +24,7 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
     @Override
     public void addHero(SuperHero hero)
     {
+        validateHero(hero);
         SimpleJdbcInsert insertHero=new SimpleJdbcInsert(jdbc).withTableName("superheroes").usingGeneratedKeyColumns("id");
 
         SqlParameterSource parameters=new MapSqlParameterSource().addValue("supername", hero.getSuperName()).addValue("realname",hero.getRealName()).addValue("realsurname", hero.getRealSurname());
@@ -44,12 +45,14 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
     @Override
     public void removeHero(SuperHero hero)
     {
+        validateHero(hero);
         jdbc.update("DELETE FROM superheroes WHERE id=?", hero.getId());
     }
 
     @Override
     public void updateHero(SuperHero hero)
     {
+        validateHero(hero);
         jdbc.update("UPDATE superheroes SET supername=?,realname=?,realsurname=? where id=?",hero.getSuperName(),hero.getRealName(),hero.getRealSurname(),hero.getId());
     }
 
@@ -58,6 +61,20 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
     public List<SuperHero> getAllSuperHeroes()
     {
         return jdbc.query("SELECT * FROM superheroes",heroMapper);
+    }
+
+    private void validateHero(SuperHero hero)
+    {
+        if (hero==null)
+        {
+            throw new IllegalArgumentException("hero is null");
+        }
+
+        if (hero.getSuperName()==null || hero.getSuperName().equals(""))
+        {
+            throw new IllegalStateException("hero with no hero name");
+        }
+
     }
 
 
