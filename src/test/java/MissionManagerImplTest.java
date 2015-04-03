@@ -29,6 +29,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Rule;
 import org.junit.rules.ExpectedException;
+import org.springframework.cglib.core.Local;
 
 public class MissionManagerImplTest {
     private MissionManagerImpl missionManager;
@@ -36,8 +37,8 @@ public class MissionManagerImplTest {
     private VillainManagerImpl villainManager;
     private DataSource dataSource;
 
-    private Date preparedDate1;
-    private Date preparedDate2;
+    private LocalDate preparedDate1;
+    private LocalDate preparedDate2;
     @Before
     public void setUp() throws SQLException,ParseException {
         BasicDataSource bds = new BasicDataSource();
@@ -75,8 +76,8 @@ public class MissionManagerImplTest {
         }
 
 
-        preparedDate1 = date("2015-12-24");
-        preparedDate2 = date("2012-07-10");
+        preparedDate1 = LocalDate.of(2015,12,24);
+        preparedDate2 = LocalDate.of(2015,06,07);
 
     }
     @After

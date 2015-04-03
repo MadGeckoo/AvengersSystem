@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8bfba0c-f2b2-4aab-8cec-d235f021bc38" name="Default" comment="timestamp zmenene na date + doplnena metoda createMission do MMI">
+    <list default="true" id="a8bfba0c-f2b2-4aab-8cec-d235f021bc38" name="Default" comment="triedy thread-safe s validaciou vstupov a implementovanymi datovymi operaciami">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MissionManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/MissionManagerImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SuperHeroManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/SuperHeroManagerImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/VillainManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/VillainManagerImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AvengersSystem.iws" />
@@ -45,39 +43,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <file leaf-file-name="VillainManagerImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/VillainManagerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="626" max-vertical-offset="1632">
-              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1921">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1789#1828#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MissionManagerImplTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MissionManagerImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7001648" vertical-offset="3150" max-vertical-offset="4879">
-              <caret line="276" column="33" selection-start-line="276" selection-start-column="33" selection-end-line="276" selection-end-column="33" />
-              <folding>
-                <marker date="1428025303461" expanded="true" signature="1297:1541" placeholder="CREATE TABLE..SUPERHEROES..." />
-                <marker date="1428025303461" expanded="true" signature="1297:1542" placeholder="CREATE TABLE..SUPERHEROES..." />
-                <marker date="1428025303461" expanded="true" signature="1598:1841" placeholder="CREATE TABLE..VILLAINS..." />
-                <marker date="1428025303461" expanded="true" signature="1598:1842" placeholder="CREATE TABLE..VILLAINS..." />
-                <marker date="1428025303461" expanded="true" signature="1898:2189" placeholder="CREATE TABLE..MISSIONS..." />
-                <marker date="1428025303461" expanded="true" signature="1898:2229" placeholder="CREATE TABLE..MISSIONS..." />
-                <marker date="1428025303461" expanded="true" signature="1898:2231" placeholder="CREATE TABLE..MISSIONS..." />
-                <marker date="1428025303461" expanded="true" signature="1898:2231" placeholder="CREATE TABLE..MISSIONS..." />
-                <marker date="1428025303461" expanded="true" signature="1898:2231" placeholder="CREATE TABLE..MISSIONS..." />
-                <marker date="1428025303461" expanded="true" signature="1898:2365" placeholder="CREATE TABLE..MISSIONS..." />
-                <marker date="1428025303461" expanded="true" signature="1898:2366" placeholder="CREATE TABLE..MISSIONS..." />
-                <marker date="1428025303461" expanded="true" signature="2934:2953" placeholder="DROP TABLE M..." />
-                <marker date="1428025303461" expanded="true" signature="3007:3029" placeholder="DROP TABLE S..." />
-                <marker date="1428025303461" expanded="true" signature="3083:3102" placeholder="DROP TABLE V..." />
+                <marker date="1428025418991" expanded="true" signature="724:968" placeholder="CREATE TABLE..VILLAINS..." />
+                <marker date="1428025418991" expanded="true" signature="1213:1232" placeholder="DROP TABLE V..." />
               </folding>
             </state>
           </provider>
@@ -86,24 +59,29 @@
       <file leaf-file-name="SuperHeroManagerImplTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SuperHeroManagerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="2159">
-              <caret line="109" column="30" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1102" max-vertical-offset="2159">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <marker date="1428024455316" expanded="true" signature="725:970" placeholder="CREATE TABLE..SUPERHEROES..." />
-                <marker date="1428024455316" expanded="true" signature="1639:1661" placeholder="DROP TABLE S..." />
+                <marker date="1428025418232" expanded="true" signature="725:970" placeholder="CREATE TABLE..SUPERHEROES..." />
+                <marker date="1428025418232" expanded="true" signature="1639:1661" placeholder="DROP TABLE S..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VillainManagerImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/VillainManagerImplTest.java">
+      <file leaf-file-name="MissionManagerImplTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MissionManagerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="1921">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+            <state vertical-scroll-proportion="1.2705771" vertical-offset="306" max-vertical-offset="5406">
+              <caret line="97" column="44" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
               <folding>
-                <marker date="1428024455331" expanded="true" signature="724:968" placeholder="CREATE TABLE..VILLAINS..." />
-                <marker date="1428024455331" expanded="true" signature="1213:1232" placeholder="DROP TABLE V..." />
+                <element signature="imports" expanded="true" />
+                <marker date="1428025945731" expanded="true" signature="1352:1597" placeholder="CREATE TABLE..SUPERHEROES..." />
+                <marker date="1428025945731" expanded="true" signature="1653:1897" placeholder="CREATE TABLE..VILLAINS..." />
+                <marker date="1428025945731" expanded="true" signature="1953:2421" placeholder="CREATE TABLE..MISSIONS..." />
+                <marker date="1428025945731" expanded="true" signature="3001:3020" placeholder="DROP TABLE M..." />
+                <marker date="1428025945731" expanded="true" signature="3074:3096" placeholder="DROP TABLE S..." />
+                <marker date="1428025945731" expanded="true" signature="3150:3169" placeholder="DROP TABLE V..." />
               </folding>
             </state>
           </provider>
@@ -124,6 +102,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/createTables.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/SuperHeroManagerImplTest.java" />
         <option value="db-console:/1f5c179/ca7448cb-5b6b-439a-ba0e-c9b710d902b1/" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/VillainManager.java" />
@@ -140,7 +119,6 @@
         <option value="$PROJECT_DIR$/src/main/java/SuperHeroManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/VillainManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/MissionManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SuperHeroManagerImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/VillainManagerImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/MissionManagerImplTest.java" />
       </list>
@@ -157,10 +135,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1216" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -237,7 +215,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,7 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AvengersSystem5" />
+              <option name="myItemId" value="AvengersSystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,7 +239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AvengersSystem5" />
+              <option name="myItemId" value="AvengersSystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -284,16 +261,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AvengersSystem5" />
+              <option name="myItemId" value="AvengersSystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AvengersSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AvengersSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,7 +313,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="options.lastSelected" value="SQL Dialects" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -440,6 +448,38 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -588,6 +628,9 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -599,6 +642,22 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -638,11 +697,6 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SliceManager">
-    <option name="analysisUIOptions">
-      <AnalysisUIOptions />
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\kost\AppData\Roaming\Subversion</configuration>
   </component>
@@ -670,9 +724,8 @@
       <workItem from="1427919194017" duration="623000" />
       <workItem from="1427921943249" duration="6596000" />
       <workItem from="1427972968332" duration="8242000" />
-      <workItem from="1427995114671" duration="16605000" />
-      <workItem from="1428020957422" duration="53000" />
-      <workItem from="1428021027566" duration="4063000" />
+      <workItem from="1427995114671" duration="20515000" />
+      <workItem from="1428025473219" duration="556000" />
     </task>
     <task id="LOCAL-00001" summary="prvy test">
       <created>1425629726407</created>
@@ -746,20 +799,20 @@
       <option name="project" value="LOCAL" />
       <updated>1427995296447</updated>
     </task>
-    <task id="LOCAL-00013" summary="pridane testy mission nedokonceny">
-      <created>1428021213430</created>
+    <task id="LOCAL-00013" summary="triedy thread-safe s validaciou vstupov a implementovanymi datovymi operaciami">
+      <created>1428019242732</created>
       <option name="number" value="00013" />
       <option name="project" value="LOCAL" />
-      <updated>1428021213430</updated>
+      <updated>1428019242732</updated>
     </task>
     <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79126000" />
+    <option name="totallyTimeSpent" value="79476000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -772,22 +825,22 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25812274" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299539" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20058565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11940298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09947917" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -845,8 +898,8 @@
     <MESSAGE value="obidve entitne triedz prerobene na Spring, v Maine doplnene stirngove apliakcie&#10;TODO: MissionManager a Impl + testy + vlaknovo bezpecne" />
     <MESSAGE value="timestamp zmenene na date" />
     <MESSAGE value="timestamp zmenene na date + doplnena metoda createMission do MMI" />
-    <MESSAGE value="pridane testy mission nedokonceny" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridane testy mission nedokonceny" />
+    <MESSAGE value="triedy thread-safe s validaciou vstupov a implementovanymi datovymi operaciami" />
+    <option name="LAST_COMMIT_MESSAGE" value="triedy thread-safe s validaciou vstupov a implementovanymi datovymi operaciami" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -893,32 +946,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1789#1828#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1789#1828#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="425">
           <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -957,7 +989,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
           <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1005,6 +1037,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="425">
           <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,7 +1076,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
           <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1091,6 +1124,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="425">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1123,6 +1157,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,6 +1186,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33286715" vertical-offset="3332" max-vertical-offset="9095">
+          <caret line="235" column="18" selection-start-line="235" selection-start-column="18" selection-end-line="235" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AvengersSystem.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="715">
@@ -1158,10 +1200,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="dbDummy://db-console:/1f5c179/ca7448cb-5b6b-439a-ba0e-c9b710d902b1/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.093706295" vertical-offset="458" max-vertical-offset="1275">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="686">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1f5c179/ca7448cb-5b6b-439a-ba0e-c9b710d902b1/.AVENGERS.VILLAINS">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1f5c179/ca7448cb-5b6b-439a-ba0e-c9b710d902b1/.AVENGERS.SUPERHEROES">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1176,6 +1242,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.344972" vertical-offset="3111" max-vertical-offset="25670">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,13 +1279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Mission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7426679" vertical-offset="1017" max-vertical-offset="2074">
-          <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/myconf.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
@@ -1230,6 +1290,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54683065" vertical-offset="0" max-vertical-offset="1057">
           <caret line="34" column="86" selection-start-line="34" selection-start-column="86" selection-end-line="34" selection-end-column="86" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,6 +1298,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14474928" vertical-offset="0" max-vertical-offset="1057">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#261#262#0" expanded="false" />
+            <element signature="e#291#292#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1261,7 +1326,7 @@
         <state vertical-scroll-proportion="0.8874172" vertical-offset="235" max-vertical-offset="1292">
           <caret line="75" column="5" selection-start-line="63" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1271,63 +1336,74 @@
         <state vertical-scroll-proportion="0.32166508" vertical-offset="867" max-vertical-offset="3128">
           <caret line="77" column="5" selection-start-line="65" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="626" max-vertical-offset="1632">
-          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1683">
+          <caret line="93" column="67" selection-start-line="93" selection-start-column="67" selection-end-line="93" selection-end-column="67" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="e#1789#1828#0" expanded="false" />
+            <element signature="e#3986#3987#0" expanded="false" />
+            <element signature="e#4053#4054#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1275">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SuperHeroManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1102" max-vertical-offset="2159">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1428025418232" expanded="true" signature="725:970" placeholder="CREATE TABLE..SUPERHEROES..." />
+            <marker date="1428025418232" expanded="true" signature="1639:1661" placeholder="DROP TABLE S..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VillainManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1314" max-vertical-offset="1921">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1921">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <marker date="1428024455331" expanded="true" signature="724:968" placeholder="CREATE TABLE..VILLAINS..." />
-            <marker date="1428024455331" expanded="true" signature="1213:1232" placeholder="DROP TABLE V..." />
+            <marker date="1428025418991" expanded="true" signature="724:968" placeholder="CREATE TABLE..VILLAINS..." />
+            <marker date="1428025418991" expanded="true" signature="1213:1232" placeholder="DROP TABLE V..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SuperHeroManagerImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Mission.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1552" max-vertical-offset="2159">
-          <caret line="109" column="30" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="30" />
-          <folding>
-            <marker date="1428024455316" expanded="true" signature="725:970" placeholder="CREATE TABLE..SUPERHEROES..." />
-            <marker date="1428024455316" expanded="true" signature="1639:1661" placeholder="DROP TABLE S..." />
-          </folding>
+        <state vertical-scroll-proportion="0.24124882" vertical-offset="561" max-vertical-offset="2057">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MissionManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7001648" vertical-offset="3150" max-vertical-offset="4879">
-          <caret line="276" column="33" selection-start-line="276" selection-start-column="33" selection-end-line="276" selection-end-column="33" />
+        <state vertical-scroll-proportion="1.2705771" vertical-offset="306" max-vertical-offset="5406">
+          <caret line="97" column="44" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
           <folding>
-            <marker date="1428025303461" expanded="true" signature="1297:1541" placeholder="CREATE TABLE..SUPERHEROES..." />
-            <marker date="1428025303461" expanded="true" signature="1297:1542" placeholder="CREATE TABLE..SUPERHEROES..." />
-            <marker date="1428025303461" expanded="true" signature="1598:1841" placeholder="CREATE TABLE..VILLAINS..." />
-            <marker date="1428025303461" expanded="true" signature="1598:1842" placeholder="CREATE TABLE..VILLAINS..." />
-            <marker date="1428025303461" expanded="true" signature="1898:2189" placeholder="CREATE TABLE..MISSIONS..." />
-            <marker date="1428025303461" expanded="true" signature="1898:2229" placeholder="CREATE TABLE..MISSIONS..." />
-            <marker date="1428025303461" expanded="true" signature="1898:2231" placeholder="CREATE TABLE..MISSIONS..." />
-            <marker date="1428025303461" expanded="true" signature="1898:2231" placeholder="CREATE TABLE..MISSIONS..." />
-            <marker date="1428025303461" expanded="true" signature="1898:2231" placeholder="CREATE TABLE..MISSIONS..." />
-            <marker date="1428025303461" expanded="true" signature="1898:2365" placeholder="CREATE TABLE..MISSIONS..." />
-            <marker date="1428025303461" expanded="true" signature="1898:2366" placeholder="CREATE TABLE..MISSIONS..." />
-            <marker date="1428025303461" expanded="true" signature="2934:2953" placeholder="DROP TABLE M..." />
-            <marker date="1428025303461" expanded="true" signature="3007:3029" placeholder="DROP TABLE S..." />
-            <marker date="1428025303461" expanded="true" signature="3083:3102" placeholder="DROP TABLE V..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1428025945731" expanded="true" signature="1352:1597" placeholder="CREATE TABLE..SUPERHEROES..." />
+            <marker date="1428025945731" expanded="true" signature="1653:1897" placeholder="CREATE TABLE..VILLAINS..." />
+            <marker date="1428025945731" expanded="true" signature="1953:2421" placeholder="CREATE TABLE..MISSIONS..." />
+            <marker date="1428025945731" expanded="true" signature="3001:3020" placeholder="DROP TABLE M..." />
+            <marker date="1428025945731" expanded="true" signature="3074:3096" placeholder="DROP TABLE S..." />
+            <marker date="1428025945731" expanded="true" signature="3150:3169" placeholder="DROP TABLE V..." />
           </folding>
         </state>
       </provider>

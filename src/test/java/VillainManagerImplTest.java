@@ -38,7 +38,7 @@ public class VillainManagerImplTest {
 
     @Test
     public void testAddVillain() throws ParseException {
-        Villain villain = newVillain("Spidervepr", "Peter", "Parek");
+        Villain villain = new Villain(null,"Spidervepr", "Peter", "Parek");
 
         villainManager.addVillain(villain);
         Long id = villain.getId();
