@@ -34,10 +34,10 @@ public class MissionManagerImplTest {
     private MissionManagerImpl missionManager;
     private SuperHeroManagerImpl heroManager;
     private VillainManagerImpl villainManager;
-    private DataSource ds;
+    private DataSource dataSource;
 
-    private LocalDate preparedDate1;
-    private LocalDate preparedDate2;
+    private Date preparedDate1;
+    private Date preparedDate2;
     @Before
     public void setUp() throws SQLException,ParseException {
         BasicDataSource bds = new BasicDataSource();
@@ -49,13 +49,13 @@ public class MissionManagerImplTest {
                     + "id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
                     + "supername VARCHAR(30),"
                     + "realname VARCHAR(20),"
-                    + "realsurname VARCHAR(40)").executeUpdate();
+                    + "realsurname VARCHAR(40))").executeUpdate();
 
             conn.prepareStatement("CREATE TABLE VILLAINS ("
                     + "id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
                     + "villainname VARCHAR(30),"
                     + "realname VARCHAR(20),"
-                    + "realsurname VARCHAR(40)").executeUpdate();
+                    + "realsurname VARCHAR(40))").executeUpdate();
 
             conn.prepareStatement("CREATE TABLE MISSIONS ("
                     + "id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
@@ -63,11 +63,13 @@ public class MissionManagerImplTest {
                     + "villainid INTEGER NOT NULL,"
                     + "location VARCHAR(40),"
                     + "date DATE NOT NULL,"
-                    + "herowon BOOLEAN"
+                    + "herowon BOOLEAN,"
                     + "FOREIGN KEY(heroid) references SUPERHEROES,"
-                    + "FOREIGN KEY(villainid) references VILLAINS,").executeUpdate();
+                    + "FOREIGN KEY(villainid) references VILLAINS)").executeUpdate();
 
             missionManager = new MissionManagerImpl(bds);
+            //DBUtils.executeSqlScript(dataSource, MissionManagerImpl.class.getResourceAsStream("/tables.sql"));
+
             heroManager= new SuperHeroManagerImpl(bds);
             villainManager = new VillainManagerImpl(bds);
         }
@@ -90,36 +92,60 @@ public class MissionManagerImplTest {
     public void testCreateMissionWithNullHero() {
         Mission mission = newSummerActionMission();
         mission.setHero(null);
-        missionManager.createMission(mission);
+        try {
+            missionManager.createMission(mission);
+        } catch (IllegalEntityException e) {
+            e.printStackTrace();
+        }
     }
     @Test(expected=ValidationException.class)
     public void testCreateMissionWithNullVillain() {
         Mission mission = newSummerActionMission();
         mission.setVillain(null);
-        missionManager.createMission(mission);
+        try {
+            missionManager.createMission(mission);
+        } catch (IllegalEntityException e) {
+            e.printStackTrace();
+        }
     }
     @Test(expected=ValidationException.class)
     public void testCreateMissionWithNullLocation() {
         Mission mission = newSummerActionMission();
         mission.setLocation(null);
-        missionManager.createMission(mission);
+        try {
+            missionManager.createMission(mission);
+        } catch (IllegalEntityException e) {
+            e.printStackTrace();
+        }
     }
     @Test(expected=ValidationException.class)
     public void testCreateMissionWithNullDate() {
         Mission mission = newSummerActionMission();
         mission.setDate(null);
-        missionManager.createMission(mission);
+        try {
+            missionManager.createMission(mission);
+        } catch (IllegalEntityException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test(expected=ValidationException.class)
     public void testCreateMissionWithNull() {
-        missionManager.createMission(null);
+        try {
+            missionManager.createMission(null);
+        } catch (IllegalEntityException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     public void testCreateMission() {
         Mission mission = newSummerActionMission();
-        missionManager.createMission(mission);
+        try {
+            missionManager.createMission(mission);
+        } catch (IllegalEntityException e) {
+            e.printStackTrace();
+        }
 
         long id = mission.getId();
 
@@ -132,7 +158,11 @@ public class MissionManagerImplTest {
 
             Mission mission = newWinterActionMission();
             mission.setId((long)1);
+        try {
             missionManager.createMission(mission);
+        } catch (IllegalEntityException e) {
+            e.printStackTrace();
+        }
 
 
     }
@@ -187,8 +217,8 @@ public class MissionManagerImplTest {
     /*---------------------------DATA------------------------------------------------*/
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    private LocalDate date(String dateString) throws ParseException {
-        LocalDate producedDate = null;
+    private Date date(String dateString) throws ParseException {
+        Date producedDate = null;
         try{
             producedDate =  dateFormat.parse(dateString);
             return producedDate;

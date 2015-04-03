@@ -24,7 +24,7 @@ public class VillainManagerImplTest {
                     + "id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
                     + "villainname VARCHAR(30),"
                     + "realname VARCHAR(20),"
-                    + "realsurname VARCHAR(40)").executeUpdate();
+                    + "realsurname VARCHAR(40))").executeUpdate();
 
         }
         villainManager = new VillainManagerImpl(bds);

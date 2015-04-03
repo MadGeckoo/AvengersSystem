@@ -24,7 +24,7 @@ public class SuperHeroManagerImplTest {
                     + "id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
                     + "supername VARCHAR(30),"
                     + "realname VARCHAR(20),"
-                    + "realsurname VARCHAR(40)").executeUpdate();
+                    + "realsurname VARCHAR(40))").executeUpdate();
         }
 
 
