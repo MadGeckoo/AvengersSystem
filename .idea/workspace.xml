@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8bfba0c-f2b2-4aab-8cec-d235f021bc38" name="Default" comment="webova aplikacia">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AvengersSystem.iml" afterPath="$PROJECT_DIR$/AvengersSystem.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/AvengersSystemWeb.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AvengersSystemWeb/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AvengersSystem.iws" />
@@ -667,7 +676,7 @@
       <workItem from="1427995114671" duration="20515000" />
       <workItem from="1428025473219" duration="556000" />
       <workItem from="1429183617624" duration="466000" />
-      <workItem from="1429184096987" duration="1291000" />
+      <workItem from="1429184096987" duration="1429000" />
     </task>
     <task id="LOCAL-00001" summary="prvy test">
       <created>1425629726407</created>
@@ -759,11 +768,17 @@
       <option name="project" value="LOCAL" />
       <updated>1429184472470</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="webova aplikacia">
+      <created>1429186972622</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1429186972636</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81233000" />
+    <option name="totallyTimeSpent" value="81371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
