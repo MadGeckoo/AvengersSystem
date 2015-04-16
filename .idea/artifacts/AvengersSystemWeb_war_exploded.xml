@@ -26,6 +26,8 @@
           <element id="archive" name="AvengersSystem-1.0-SNAPSHOT.jar">
             <element id="module-output" name="AvengersSystem" />
           </element>
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.1.2" />
+          <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
