@@ -6,10 +6,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
-import java.sql.*;
-import java.sql.Connection;
 import java.util.List;
-import java.util.ArrayList;
 
 public class SuperHeroManagerImpl implements SuperHeroManager {
 
