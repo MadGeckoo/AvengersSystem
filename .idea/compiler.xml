@@ -27,5 +27,8 @@
         <module name="AvengersSystemWeb" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AvengersSystemWeb" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
