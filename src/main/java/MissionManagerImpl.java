@@ -1,5 +1,6 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
@@ -17,6 +18,9 @@ public class MissionManagerImpl implements MissionManager {
 	private SuperHeroManager superHeroManager;
 	private VillainManager villainManager;
     private JdbcTemplate jdbc;
+
+    final static Logger log = LoggerFactory.getLogger(MissionManagerImpl.class);
+
 
     public MissionManagerImpl(DataSource dataSource)
     {
@@ -49,12 +53,15 @@ public class MissionManagerImpl implements MissionManager {
                 .addValue("herowon",mission.getHeroWon());
         Number id=insertMission.executeAndReturnKey(parameters);
         mission.setId(id.longValue());
-	}
+        log.debug("created {}",mission);
+
+    }
 
     @Override
     @Transactional
 	public List<Mission> findAllMissions()
     {
+        log.debug("started fetching all missions");
         return jdbc.query("SELECT * FROM missions",
                 (rs,rowNum)->{
                     long id = rs.getLong("id");
@@ -65,6 +72,7 @@ public class MissionManagerImpl implements MissionManager {
                     boolean herowon=rs.getBoolean("herowon");
                     return new Mission(id,location,date,hero,villain,herowon);
                 });
+
 	}
 
 	/**
@@ -74,7 +82,8 @@ public class MissionManagerImpl implements MissionManager {
     @Override
 	public List<Mission> findMissionsByHero(SuperHero superHero) throws IllegalEntityException{
         validateHero(superHero);
-		return jdbc.query("SELECT * FROM missions WHERE heroid=?",
+        log.debug("started fetching missions for hero {}", superHero);
+        return jdbc.query("SELECT * FROM missions WHERE heroid=?",
                 (rs,rowNum)->{
                     long villainId=rs.getLong("villainid");
                     Villain villain=null;
@@ -96,6 +105,7 @@ public class MissionManagerImpl implements MissionManager {
     @Override
 	public List<Mission> findMissionsByVillain(Villain villain) throws IllegalEntityException {
         validateVillain(villain);
+        log.debug("started fetching missions for villain {}", villain);
         return jdbc.query("SELECT * FROM missions WHERE villainid=?",
                 (rs, rowNum) -> {
                     long heroId = rs.getLong("heroid");
@@ -117,6 +127,7 @@ public class MissionManagerImpl implements MissionManager {
 	 */
     @Override
 	public Mission getMissionByID(Long id) {
+        log.debug("started fetching mission with id {}", id);
         return jdbc.queryForObject("SELECT * FROM missions WHERE id=?",
                 (rs,rowNum)->{
                     String location=rs.getString("location");
@@ -137,6 +148,7 @@ public class MissionManagerImpl implements MissionManager {
 	public void updateMission(Mission mission) throws IllegalEntityException {
         validateMission(mission);
 		jdbc.update("UPDATE missions SET location=?,date=?,heroid=?,villainid=?,herowon=? WHERE id=?",mission.getLocation(),toSQLDate(mission.getDate()),mission.getHero().getId(),mission.getVillain().getId(),mission.getHeroWon(),mission.getId());
+        log.debug("updated mission {}", mission);
 	}
 
 
@@ -148,11 +160,13 @@ public class MissionManagerImpl implements MissionManager {
     private void validateHero(SuperHero hero) throws IllegalEntityException {
         if (hero==null)
         {
+            log.error(" hero is null ");
             throw new IllegalEntityException("hero is null");
         }
 
         if (hero.getSuperName()==null || hero.getSuperName().equals(""))
         {
+            log.error("hero doesnt have super name");
             throw new IllegalEntityException("hero with no hero name");
         }
 
@@ -161,11 +175,13 @@ public class MissionManagerImpl implements MissionManager {
     private void validateVillain(Villain villain) throws IllegalEntityException {
         if (villain==null)
         {
+            log.error(" villain is null ");
             throw new IllegalEntityException("villain is null");
         }
 
         if (villain.getVillainName()==null || villain.getVillainName().equals(""))
         {
+            log.error("villain doesnt have villain name");
             throw new IllegalEntityException("villain with no villain name");
         }
 
@@ -174,11 +190,13 @@ public class MissionManagerImpl implements MissionManager {
 
     private void validateMission(Mission mission) {
         if (mission == null) {
+            log.error(" mission is null ");
             throw new IllegalArgumentException("The mission was null.");
         }
 
         if (mission.getLocation().equals("") || mission.getLocation()==null)
         {
+            log.error("mission doesnt have location");
             throw new IllegalStateException("Mission without location");
         }
     }

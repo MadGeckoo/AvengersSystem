@@ -1,3 +1,5 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -12,6 +14,9 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
 
 
     private JdbcTemplate jdbc;
+
+    final static Logger log = LoggerFactory.getLogger(SuperHeroManagerImpl.class);
+
 
     public SuperHeroManagerImpl(DataSource dataSource)
     {
@@ -28,6 +33,8 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
 
         Number id=insertHero.executeAndReturnKey(parameters);
         hero.setId(id.longValue());
+        log.debug("created {}",hero);
+
 
     }
 
@@ -36,7 +43,9 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
     @Override
     public SuperHero getHeroByID(Long id)
     {
+        log.debug("hero with id {} was selected",id);
         return jdbc.queryForObject("SELECT * FROM superheroes WHERE id=?",heroMapper,id);
+
     }
 
     @Override
@@ -44,6 +53,8 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
     {
         validateHero(hero);
         jdbc.update("DELETE FROM superheroes WHERE id=?", hero.getId());
+        log.debug("deleted hero {}",hero.getId());
+
     }
 
     @Override
@@ -51,6 +62,8 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
     {
         validateHero(hero);
         jdbc.update("UPDATE superheroes SET supername=?,realname=?,realsurname=? where id=?",hero.getSuperName(),hero.getRealName(),hero.getRealSurname(),hero.getId());
+        log.debug("updated hero {}",hero.getId());
+
     }
 
     @Transactional
@@ -62,13 +75,15 @@ public class SuperHeroManagerImpl implements SuperHeroManager {
 
     private void validateHero(SuperHero hero)
     {
-        if (hero==null)
+        if (hero == null)
         {
+            log.error(" hero is null ");
             throw new IllegalArgumentException("hero is null");
         }
 
         if (hero.getSuperName()==null || hero.getSuperName().equals(""))
         {
+            log.error("hero doesnt have super name");
             throw new IllegalStateException("hero with no hero name");
         }
 
