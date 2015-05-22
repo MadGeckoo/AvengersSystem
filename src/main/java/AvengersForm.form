@@ -81,7 +81,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="Add new hero"/>
+                  <text resource-bundle="buttonsInApp" key="AddHero"/>
                 </properties>
               </component>
               <component id="f7af3" class="javax.swing.JLabel">

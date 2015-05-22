@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AvengersSystem.iml" filepath="$PROJECT_DIR$/AvengersSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/../AvengersSystemWeb/AvengersSystemWeb.iml" filepath="$PROJECT_DIR$/../AvengersSystemWeb/AvengersSystemWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AvengersSystemWeb/AvengersSystemWeb.iml" filepath="$PROJECT_DIR$/../AvengersSystemWeb/AvengersSystemWeb.iml" />
     </modules>
   </component>
 </project>
