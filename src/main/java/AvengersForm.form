@@ -14,7 +14,9 @@
             <preferred-size width="200" height="200"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <toolTipText resource-bundle="tabsInApp" key="Missions"/>
+        </properties>
         <border type="none"/>
         <children>
           <grid id="5789a" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -58,23 +60,23 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="cbbdf" class="javax.swing.JButton" binding="updateHeroButton" default-binding="true">
+              <component id="cbbdf" class="javax.swing.JButton" binding="aktualizovaťHrdinuButton" default-binding="true">
                 <constraints>
                   <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Update hero"/>
+                  <text resource-bundle="buttonsInApp" key="UpdateHero"/>
                 </properties>
               </component>
-              <component id="a3a63" class="javax.swing.JButton" binding="removeHeroButton" default-binding="true">
+              <component id="a3a63" class="javax.swing.JButton" binding="odstrániťHrdinuButton" default-binding="true">
                 <constraints>
                   <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Remove hero"/>
+                  <text resource-bundle="buttonsInApp" key="RemoveHero"/>
                 </properties>
               </component>
-              <component id="17a44" class="javax.swing.JButton" binding="addNewHeroButton" default-binding="true">
+              <component id="17a44" class="javax.swing.JButton" binding="pridaťNovéhoHrdinuButton" default-binding="true">
                 <constraints>
                   <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="96" height="32"/>
@@ -91,7 +93,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="Super name"/>
+                  <text resource-bundle="labelsInApp" key="SuperName"/>
                 </properties>
               </component>
               <component id="7ff11" class="javax.swing.JTextArea" binding="getAllHeroesTextArea" default-binding="true">
@@ -109,7 +111,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Real name"/>
+                  <text resource-bundle="labelsInApp" key="RealName"/>
                 </properties>
               </component>
               <component id="4bc13" class="javax.swing.JLabel">
@@ -117,7 +119,7 @@
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Real surname"/>
+                  <text resource-bundle="labelsInApp" key="RealSurname"/>
                 </properties>
               </component>
               <component id="7ab96" class="javax.swing.JLabel">
@@ -153,7 +155,7 @@
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Real surname"/>
+                  <text resource-bundle="labelsInApp" key="RealSurname"/>
                 </properties>
               </component>
               <component id="eaa23" class="javax.swing.JLabel">
@@ -174,28 +176,28 @@
                   <text value="GetAllVillains"/>
                 </properties>
               </component>
-              <component id="8b513" class="javax.swing.JButton" binding="removeVillainButton" default-binding="true">
+              <component id="8b513" class="javax.swing.JButton" binding="odstrániťZloduchaButton" default-binding="true">
                 <constraints>
                   <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Remove villain"/>
+                  <text resource-bundle="buttonsInApp" key="RemoveVillain"/>
                 </properties>
               </component>
-              <component id="a1c77" class="javax.swing.JButton" binding="addNewVillainButton" default-binding="true">
+              <component id="a1c77" class="javax.swing.JButton" binding="pridaťZloduchaButton" default-binding="true">
                 <constraints>
                   <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Add new villain"/>
+                  <text resource-bundle="buttonsInApp" key="AddVillain"/>
                 </properties>
               </component>
-              <component id="deece" class="javax.swing.JButton" binding="updateVillainButton" default-binding="true">
+              <component id="deece" class="javax.swing.JButton" binding="aktualizovaťZloduchaButton" default-binding="true">
                 <constraints>
                   <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Update villain"/>
+                  <text resource-bundle="buttonsInApp" key="UpdateVillain"/>
                 </properties>
               </component>
               <component id="3130d" class="javax.swing.JLabel">
@@ -203,7 +205,7 @@
                   <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Villain name"/>
+                  <text resource-bundle="labelsInApp" key="VillainName"/>
                 </properties>
               </component>
               <component id="93b39" class="javax.swing.JLabel">
@@ -211,7 +213,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Real name"/>
+                  <text resource-bundle="labelsInApp" key="RealName"/>
                 </properties>
               </component>
               <component id="b2928" class="javax.swing.JTextField" binding="textField4" default-binding="true">
@@ -279,7 +281,7 @@
                   <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Hero ID"/>
+                  <text resource-bundle="labelsInApp" key="HeroID"/>
                 </properties>
               </component>
               <component id="efe42" class="javax.swing.JLabel">
@@ -287,7 +289,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Villain ID"/>
+                  <text resource-bundle="labelsInApp" key="VillainID"/>
                 </properties>
               </component>
               <component id="2cd5b" class="javax.swing.JLabel">
@@ -295,7 +297,7 @@
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Date"/>
+                  <text resource-bundle="labelsInApp" key="Date"/>
                 </properties>
               </component>
               <component id="75256" class="javax.swing.JLabel">
@@ -303,7 +305,7 @@
                   <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Place"/>
+                  <text resource-bundle="labelsInApp" key="Place"/>
                 </properties>
               </component>
               <component id="aa38d" class="javax.swing.JLabel">
@@ -311,7 +313,7 @@
                   <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Did hero win?"/>
+                  <text resource-bundle="labelsInApp" key="HeroWon"/>
                 </properties>
               </component>
               <component id="f82ab" class="javax.swing.JLabel">
@@ -319,7 +321,7 @@
                   <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Mission ID"/>
+                  <text resource-bundle="labelsInApp" key="MissionID"/>
                 </properties>
               </component>
               <component id="8e240" class="javax.swing.JTextArea" binding="getAllMissionsTextArea" default-binding="true">
@@ -332,36 +334,36 @@
                   <text value="GetAllMissions"/>
                 </properties>
               </component>
-              <component id="a7517" class="javax.swing.JButton" binding="addNewMissionButton" default-binding="true">
+              <component id="a7517" class="javax.swing.JButton" binding="pridaťMisiuButton" default-binding="true">
                 <constraints>
                   <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Add new mission"/>
+                  <text resource-bundle="buttonsInApp" key="AddMission"/>
                 </properties>
               </component>
-              <component id="43ca" class="javax.swing.JButton" binding="findMissionByHeroButton" default-binding="true">
+              <component id="43ca" class="javax.swing.JButton" binding="vyhľadajMisiePreHrdinuButton" default-binding="true">
                 <constraints>
                   <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Find mission by hero"/>
+                  <text resource-bundle="buttonsInApp" key="FindMissionByHero"/>
                 </properties>
               </component>
-              <component id="356bd" class="javax.swing.JButton" binding="findMissionByVillainButton" default-binding="true">
+              <component id="356bd" class="javax.swing.JButton" binding="vyhľadajMisiePreZloduchaButton" default-binding="true">
                 <constraints>
                   <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Find mission by villain"/>
+                  <text resource-bundle="buttonsInApp" key="FindMissionByVillain"/>
                 </properties>
               </component>
-              <component id="312a3" class="javax.swing.JButton" binding="updateMissionButton" default-binding="true">
+              <component id="312a3" class="javax.swing.JButton" binding="aktualizovaťMisiuButton" default-binding="true">
                 <constraints>
                   <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Update mission"/>
+                  <text resource-bundle="buttonsInApp" key="UpdateMission"/>
                 </properties>
               </component>
               <component id="c6c2f" class="javax.swing.JTextField" binding="textField7" default-binding="true">
