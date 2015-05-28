@@ -13,8 +13,6 @@ public class AvengersForm {
     private JButton aktualizovaťHrdinuButton;
     private JButton pridaťNovéhoHrdinuButton;
     private JButton odstrániťHrdinuButton;
-    private JTextArea getAllHeroesTextArea;
-    private JTextArea getAllVillainsTextArea;
     private JButton odstrániťZloduchaButton;
     private JButton pridaťZloduchaButton;
     private JButton aktualizovaťZloduchaButton;
@@ -22,7 +20,6 @@ public class AvengersForm {
     private JTextField textField5;
     private JTextField textField6;
     private JComboBox comboBox2;
-    private JTextArea getAllMissionsTextArea;
     private JButton pridaťMisiuButton;
     private JButton vyhľadajMisiePreHrdinuButton;
     private JButton vyhľadajMisiePreZloduchaButton;
@@ -33,4 +30,13 @@ public class AvengersForm {
     private JTextField textField10;
     private JTextField textField11;
     private JComboBox comboBox3;
+    private JTable table1;
+    private JTable table2;
+    private JTable jTableMissions;
+
+    public AvengersForm() {
+        table2.setModel(new HeroesTableModel());
+
+
+    }
 }
