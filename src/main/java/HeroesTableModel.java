@@ -15,8 +15,11 @@ public class HeroesTableModel extends AbstractTableModel {
     private List<SuperHero> heroes=new ArrayList<SuperHero>();
     private static Logger log = LoggerFactory.getLogger(HeroesTableModel.class);
     private static ResourceBundle bundle = ResourceBundle.getBundle("labelsInApp", Locale.getDefault());
+    private SuperHeroManager heroManager;
 
-
+    public void setHeroManager(SuperHeroManager heroManager) {
+        this.heroManager = heroManager;
+    }
 
     @Override
     public int getRowCount()

@@ -15,8 +15,11 @@ public class VillainTableModel extends AbstractTableModel {
     private List<Villain> villains=new ArrayList<Villain>();
     private static Logger log = LoggerFactory.getLogger(VillainTableModel.class);
     private static ResourceBundle bundle = ResourceBundle.getBundle("labelsInApp", Locale.getDefault());
+    private VillainManager villainManager;
 
-
+    public void setVillainManager(VillainManager villainManager) {
+        this.villainManager = villainManager;
+    }
 
     @Override
     public int getRowCount()
